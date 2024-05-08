@@ -17,6 +17,8 @@ function init() {
     console.log(voices.length);
     for (let i = 0; i < voices.length; i++) {
       const option = document.createElement("option");
+      
+      //changed this line to make grabbing the right voice object easier for tts method.
       option.textContent = i + ". " + `${voices[i].name} (${voices[i].lang})`;
 
       if (voices[i].default) {
